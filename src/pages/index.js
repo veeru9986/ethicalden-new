@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Banner from "../components/Banner";
 import RightSection from "../components/RightSection";
 import LeftSection from "../components/LeftSection";
+import security from "../images/gif/Cyber Security.gif"
+import marketing from "../images/gif/Digital Marketing.gif"
+import education from "../images/gif/Education.gif"
 
 import { Wrapper } from "../components/StyledComponents/Wrapper";
 import Services from "../components/Services";
@@ -15,19 +18,19 @@ const data = [
     id: 0,
     title: "SECURity EXperts",
     desc: "With the best hand-picked Ethical Hackers on our side, threats and risks pertaining to the cyber world is something we are very good at defending. ",
-    image: "",
+    image: security,
   },
   {
     id: 0,
     title: "EDUCATION EXPERTS",
     desc: "Our top-notch trainers and mentors teach for fun. Their unique way of educating and making people understand makes studies very easy.",
-    image: "",
+    image: education,
   },
   {
     id: 0,
     title: "DIGITAL MARKETING",
     desc: "With a bunch of experienced growth hackers, Ethical Den can help you hack the maximum reach one can achieve in the digital world!",
-    image: "",
+    image: marketing,
   },
 ];
 

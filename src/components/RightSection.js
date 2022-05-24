@@ -70,7 +70,10 @@ const Wrapper = styled.div`
     .image {
       width: 383px;
       height: 451px;
-      background: #c4c4c4;
+      display: block;
+      img{
+        width: 100%;
+      }
       @media (max-width: 479px) {
         height: 350px;
         width: 100%;
@@ -130,7 +133,9 @@ function RightSection({ data }) {
         </p>
       </div>
       <div className="left-section" data-scroll data-scroll-speed="2">
-        <div className="image" />
+        <div className="image">
+          <img src={data.image} alt={data.title} />
+          </div>
       </div>
     </Wrapper>
   );

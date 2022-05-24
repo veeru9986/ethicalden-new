@@ -54,7 +54,7 @@ function Layout({ children, location }) {
   if (typeof window === "undefined" || !window.document) {
     return null;
   }
-  
+
   return (
     <>
       <Helmet>
@@ -73,7 +73,9 @@ function Layout({ children, location }) {
             data-scroll-container
           >
             {children}
-            <Footer />
+            {location.pathname.match("/under-construction") ? null : (
+              <Footer />
+            )}
           </div>
         </div>
       ) : (
