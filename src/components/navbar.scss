@@ -8,7 +8,7 @@
   position: relative;
   box-sizing: border-box;
   color: #fff;
-  background: var(--black);
+  background: var(--black) !important;
   background-clip: padding-box; /* !importanté */
   border: solid 1px transparent; /* !importanté */
   border-radius: 66px;
