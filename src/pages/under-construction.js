@@ -13,10 +13,10 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
-  .top-container{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+  .top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   h1 {
     font-size: 96px;
@@ -37,14 +37,15 @@ const Container = styled.div`
     text-align: center;
 
     @media (max-width: 767px) {
-      font-size: var(--h1);
+      font-size: 48px;
     }
   }
   p {
     text-align: center;
-    width: 80%;
+    width: 65%;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 400;
+    line-height: 28px;
     @media (max-width: 767px) {
       font-size: var(--p1);
       width: 90%;
@@ -92,11 +93,12 @@ const Container = styled.div`
     }
   }
   .company-details {
+    margin-top: -2rem;
     h6 {
       color: var(--white);
       font-size: 18px;
       margin-top: 0;
-
+      font-weight: 400;
       @media (max-width: 479px) {
         font-size: 16px !important;
       }
@@ -111,8 +113,9 @@ function UnderConstruction() {
         <div className="top-container">
           <h1>Under construction</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi,
-            blandit augue in pretium sed pellentesque rhoncus lorem.
+            This will be worth the wait. We’re adding the finishing touches. See
+            what curiosity is capable of creating. Something may work on paper,
+            but that means nothing if it flounders in the real world!
           </p>
         </div>
 

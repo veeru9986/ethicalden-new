@@ -64,6 +64,9 @@ const Wrapper = styled.div`
       width: 100%;
       display: flex;
       flex-direction: column;
+      @media (max-width: 479px){
+        height: 3rem;
+      }
     }
     .scroller > span {
       position: absolute;
@@ -91,6 +94,9 @@ const Wrapper = styled.div`
       -webkit-text-fill-color: transparent;
       background-clip: text;
       line-height: 80px;
+      @media (max-width: 479px){
+        line-height: 58px;
+      }
     }
 
     @keyframes slide {
@@ -113,13 +119,13 @@ const Wrapper = styled.div`
         top: 0;
       }
       25% {
-        top: -70px;
+        top: -60px;
       }
       50% {
-        top: -160px;
+        top: -120px;
       }
       75% {
-        top: -240px;
+        top: -180px;
       }
     }
   .divider {
