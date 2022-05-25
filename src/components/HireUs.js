@@ -59,7 +59,7 @@ const Wrapper = styled.div`
         flex-wrap: wrap;
         margin-top: 1rem;
 
-        .selected-services{
+        .selected-services {
           background: var(--background);
           color: var(--black);
           transition: all 0.2s ease;
@@ -523,9 +523,9 @@ function HireUs() {
 
         <div className="details">
           <p id="footer-1" className={cn({ "is-reveal": reveal })}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultricies
-            molestie arcu rhoncus maecenas lectus. Ornare turpis bibendum at
-            eget nibh feugiat augue. Morbi.
+            When you choose to work with a company, you're looking for a
+            relationship based on trust and respect. We're not just a vendor,
+            we're your partner.
           </p>
           <div className="company-details">
             <h6 id="footer-1" className={cn({ "is-reveal": reveal })}>

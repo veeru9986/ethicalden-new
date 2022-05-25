@@ -64,7 +64,7 @@ const Wrapper = styled.div`
       width: 100%;
       display: flex;
       flex-direction: column;
-      @media (max-width: 479px){
+      @media (max-width: 479px) {
         height: 3rem;
       }
     }
@@ -73,7 +73,7 @@ const Wrapper = styled.div`
       top: 0;
       animation: slide 7s infinite;
 
-      @media (max-width: 479px){
+      @media (max-width: 479px) {
         animation: slide-mobile 7s infinite;
       }
     }
@@ -94,7 +94,7 @@ const Wrapper = styled.div`
       -webkit-text-fill-color: transparent;
       background-clip: text;
       line-height: 80px;
-      @media (max-width: 479px){
+      @media (max-width: 479px) {
         line-height: 58px;
       }
     }
@@ -115,19 +115,19 @@ const Wrapper = styled.div`
     }
   }
   @keyframes slide-mobile {
-      0% {
-        top: 0;
-      }
-      25% {
-        top: -60px;
-      }
-      50% {
-        top: -120px;
-      }
-      75% {
-        top: -180px;
-      }
+    0% {
+      top: 0;
     }
+    25% {
+      top: -60px;
+    }
+    50% {
+      top: -120px;
+    }
+    75% {
+      top: -180px;
+    }
+  }
   .divider {
     width: 175px;
     height: 10px;
@@ -181,7 +181,7 @@ const Wrapper = styled.div`
     svg {
       margin-right: 1rem;
 
-      @media (max-width: 479px){
+      @media (max-width: 479px) {
         width: 25px;
       }
     }
@@ -256,8 +256,8 @@ function Banner() {
         </div>
         <div className="divider" />
         <p data-scroll id="p">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, blandit
-          augue in pretium sed pellentesque rhoncus lorem.
+          We're the best digital marketing agency from West Bengal, curating
+          experiences that users fall in love with
         </p>
         <div className="social-icons" data-scroll data-scroll-speed="-1.7">
           <a href="/">

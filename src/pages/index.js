@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Banner from "../components/Banner";
 import RightSection from "../components/RightSection";
 import LeftSection from "../components/LeftSection";
-import security from "../images/gif/Cyber Security.gif"
-import marketing from "../images/gif/Digital Marketing.gif"
-import education from "../images/gif/Education.gif"
+import security from "../images/gif/Cyber Security.gif";
+import marketing from "../images/gif/Digital Marketing.gif";
+import education from "../images/gif/Education.gif";
 
 import { Wrapper } from "../components/StyledComponents/Wrapper";
 import Services from "../components/Services";
@@ -17,19 +17,19 @@ const data = [
   {
     id: 0,
     title: "SECURity EXperts",
-    desc: "With the best hand-picked Ethical Hackers on our side, threats and risks pertaining to the cyber world is something we are very good at defending. ",
+    desc: "Knowing the state of your current cybersecurity posture as well as executing on continued cybersecurity initiatives is critical to staying ahead of the constantly evolving risks that are out there. With Audits, Penetration Testing & Security System Architecture and Implementation, Ethical Den can help you better understand where you are now and where you need to be tomorrow.",
     image: security,
   },
   {
     id: 0,
     title: "EDUCATION EXPERTS",
-    desc: "Our top-notch trainers and mentors teach for fun. Their unique way of educating and making people understand makes studies very easy.",
+    desc: "We create unique & efficient digital solutions that help businesses grow. By bringing the latest IT advancements to various industries, we deliver custom software that completely fits the behavior and needs of our customers. While Ethical Den records continuous growth and expansion, with the software solutions we provide, our customers grow, too.",
     image: education,
   },
   {
     id: 0,
     title: "DIGITAL MARKETING",
-    desc: "With a bunch of experienced growth hackers, Ethical Den can help you hack the maximum reach one can achieve in the digital world!",
+    desc: "At Ethical Den, we pride ourselves on digital marketing campaigns that build Brand Equity by using unique insights into your target market. A solid social media marketing strategy supports your wider digital marketing approach. Our team of digital marketing Cosmonauts ensure that your brands' online marketing strategy and planning are prepared to the standards of global best practices and built to achieve your brand's objectives. ",
     image: marketing,
   },
 ];
