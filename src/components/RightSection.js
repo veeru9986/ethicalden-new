@@ -82,7 +82,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function RightSection({ data }) {
+function RightSection({ data, kId }) {
   const ref = React.useRef();
   const [reveal, setReveal] = React.useState(false);
 
@@ -116,8 +116,8 @@ function RightSection({ data }) {
       });
     }
   }, [reveal]);
-  return (
-    <Wrapper>
+  return (  
+    <Wrapper id={kId}>
       <div className={cn("right-section", { "is-reveal": reveal })}>
         <div className="heading">
           <h4

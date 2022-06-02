@@ -3,7 +3,6 @@ import { Link } from "gatsby";
 import { mainMenuItems } from "../../constants/menu-item";
 import styled from "styled-components";
 import { ButtonStyled, LinkStyled } from "../StyledComponents/Wrapper";
-import Cart from "../../assets/cart.svg";
 import "../navbar.scss"
 const ButtonStyled1 = styled(ButtonStyled)`
   min-width: 100px;
@@ -73,16 +72,17 @@ const Right = ({ open, setOpen, data }) => {
   return (
     <>
       <UL open={open}>
-        {data.map((n) => (
+        {data.map((n, id) => (
           <li key={n.id}>
-            <Link
+            <a
               className="menu-links"
               activeClassName="menu-links-active"
-              to={n.link}
+              href={`#${n.title}`}
               onClick={() => setOpen(!open)}
+              data-scroll-to
             >
               {n.title}
-            </Link>
+            </a>
           </li>
         ))}
       </UL>

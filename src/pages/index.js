@@ -22,7 +22,7 @@ const data = [
   },
   {
     id: 0,
-    title: "EDUCATION EXPERTS",
+    title: "Development EXPERTS",
     desc: "We create unique & efficient digital solutions that help businesses grow. By bringing the latest IT advancements to various industries, we deliver custom software that completely fits the behavior and needs of our customers. While Ethical Den records continuous growth and expansion, with the software solutions we provide, our customers grow, too.",
     image: education,
   },
@@ -63,10 +63,10 @@ function Index() {
         <Banner />
       </Container1>
       <Container>
-        <RightSection data={data[0]} />
+        <RightSection data={data[0]} kId="1" />
         <LeftSection data={data[1]} />
         <RightSection data={data[2]} />
-        <Services />
+        <Services kId="services" />
         <Ourwork />
         <OurClient />
         <Ourteam />

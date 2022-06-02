@@ -107,6 +107,8 @@ const Container = styled.div`
 `;
 
 function UnderConstruction() {
+  const d = new Date();
+  let year = d.getFullYear()
   return (
     <Wrapper>
       <Container>
@@ -121,18 +123,18 @@ function UnderConstruction() {
 
         <div className="container">
           <div className="social-icons" data-scroll data-scroll-speed="-1.7">
-            <a href="/">
-              <Insta />
-            </a>
-            <a href="/">
-              <Facebook />
-            </a>
-            <a href="/">
-              <Behance />
-            </a>
+          <a href="https://www.instagram.com/ethical.den/?utm_medium=copy_link">
+                <Insta />
+              </a>
+              <a href="https://www.facebook.com/ethicalden">
+                <Facebook />
+              </a>
+              <a href="https://www.behance.net/ethicalden">
+                <Behance />
+              </a>
           </div>
           <div className="company-details">
-            <h6 id="footer-1">© 2022, Ethical Den, all rights reserved</h6>
+            <h6 id="footer-1">© {year}, Ethical Den, all rights reserved</h6>
           </div>
         </div>
       </Container>

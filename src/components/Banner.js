@@ -188,7 +188,7 @@ const Wrapper = styled.div`
     a:hover {
       svg,
       path {
-        fill: #09e5e5;
+        fill: var(--greenColor);
       }
 
       #my-cool-gradient {
@@ -260,13 +260,13 @@ function Banner() {
           experiences that users fall in love with
         </p>
         <div className="social-icons" data-scroll data-scroll-speed="-1.7">
-          <a href="/">
+          <a href="https://www.instagram.com/ethical.den/?utm_medium=copy_link">
             <Insta />
           </a>
-          <a href="/">
+          <a href="https://www.facebook.com/ethicalden">
             <Facebook />
           </a>
-          <a href="/">
+          <a href="https://www.behance.net/ethicalden">
             <Behance />
           </a>
         </div>

@@ -45,9 +45,9 @@ const Nav = styled.nav`
   justify-content: space-around;
   z-index: 11;
 
-  @media (min-width: 1700px) {
+  /* @media (min-width: 1700px) {
     width: 80%;
-  }
+  } */
   .logo {
     z-index: 11;
     svg {
