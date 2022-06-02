@@ -63,12 +63,12 @@ function Index() {
         <Banner />
       </Container1>
       <Container>
-        <RightSection data={data[0]} kId="1" />
+        <RightSection data={data[0]} kId="aboutus" />
         <LeftSection data={data[1]} />
         <RightSection data={data[2]} />
         <Services kId="services" />
-        <Ourwork />
-        <OurClient />
+        <Ourwork kId="ourwork" />
+        <OurClient kId="education" />
         <Ourteam />
       </Container>
     </Wrapper>

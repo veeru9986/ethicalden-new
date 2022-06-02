@@ -101,10 +101,10 @@ const Wrapper = styled.div`
   }
 `;
 
-function Ourwork() {
+function Ourwork({kId}) {
   return (
     <Wrapper>
-      <div className="heading">
+      <div className="heading" id={kId}>
         <h5>Our work</h5>
       </div>
       <div className="our-clients-wrapper">

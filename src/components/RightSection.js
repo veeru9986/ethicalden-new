@@ -104,7 +104,6 @@ function RightSection({ data, kId }) {
         opacity: 0,
         stagger: 0.2,
         ease: "power2",
-        onComplete: () => split.revert(),
 
       });
       gsap.from("#right-heading", {

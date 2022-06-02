@@ -3,7 +3,8 @@ import { Link } from "gatsby";
 import { mainMenuItems } from "../../constants/menu-item";
 import styled from "styled-components";
 import { ButtonStyled, LinkStyled } from "../StyledComponents/Wrapper";
-import "../navbar.scss"
+import LocomotiveScroll from "locomotive-scroll";
+import "../navbar.scss";
 const ButtonStyled1 = styled(ButtonStyled)`
   min-width: 100px;
   padding: 1rem 3rem;
@@ -69,17 +70,43 @@ const UL = styled.ul`
 
 const Right = ({ open, setOpen, data }) => {
   console.log(data[0].title);
+  const handleClick = (title) => {
+    const newTitle = title.split(" ").join('')
+    const scrollEl = document.querySelector("#main-container");
+    let locomotive = new LocomotiveScroll({
+      el: scrollEl,
+      smooth: true,
+      smoothMobile: true,
+      getDirection: true,
+      touchMultiplier: 2.5,
+      lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
+      multiplier: 1.4, // Effect Multiplier
+      reloadOnContextChange: true,
+      touchMultiplier: 2,
+      smoothMobile: true,
+      smartphone: {
+        smooth: true,
+        breakpoint: 767,
+      },
+      tablet: {
+        smooth: true,
+        breakpoint: 1024,
+      },
+      class: "is-reveal",
+    });
+    const slider = document.querySelector(`#${newTitle}`);
+    var scrollToHere = slider.offsetTop;
+    locomotive.scrollTo(scrollToHere, 0, 0);
+  };
   return (
     <>
       <UL open={open}>
         {data.map((n, id) => (
           <li key={n.id}>
             <a
-              className="menu-links"
+              className={`menu-links`}
               activeClassName="menu-links-active"
-              href={`#${n.title}`}
-              onClick={() => setOpen(!open)}
-              data-scroll-to
+              onClick={() => handleClick(n.title)}
             >
               {n.title}
             </a>
@@ -88,7 +115,11 @@ const Right = ({ open, setOpen, data }) => {
       </UL>
       <UL>
         <li>
-          <ButtonStyled1 to="/sign-in" onClick={() => setOpen(!open)} id="hire-us">
+          <ButtonStyled1
+            to="/sign-in"
+            onClick={() => setOpen(!open)}
+            id="hire-us"
+          >
             hire us
           </ButtonStyled1>
         </li>

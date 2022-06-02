@@ -11,7 +11,7 @@ export default function useLocoScroll(start) {
     if (!start) return;
     let locoScroll = null;
 
-    const scrollEl = document.querySelector('#main-container');
+    const scrollEl = document.querySelector("#main-container");
 
     locoScroll = new LocomotiveScroll({
       el: scrollEl,
@@ -19,18 +19,17 @@ export default function useLocoScroll(start) {
       smoothMobile: true,
       getDirection: true,
       touchMultiplier: 2.5,
-      lerp: 0.15,
       lerp: 0.03, // Linear Interpolation, 0 > 1 // Try 0.01
       multiplier: 1.4, // Effect Multiplier
       reloadOnContextChange: true,
       touchMultiplier: 2,
-      smoothMobile: 0,
+      smoothMobile: true,
       smartphone: {
-        smooth: !0,
+        smooth: true,
         breakpoint: 767,
       },
       tablet: {
-        smooth: !1,
+        smooth: true,
         breakpoint: 1024,
       },
       class: "is-reveal",
@@ -39,16 +38,16 @@ export default function useLocoScroll(start) {
     locoScroll.on("scroll", (instance) => {
       ScrollTrigger.update();
       if (instance.scroll.y > 100) {
-        document.querySelector("#color").classList.add("color-change")
-        document.querySelector("#hire-us").classList.add("hire-border-change")
+        document.querySelector("#color").classList.add("color-change");
+        document.querySelector("#hire-us").classList.add("hire-border-change");
+      } else {
+        console.log("lesser");
+        document.querySelector("#color").classList.remove("color-change");
 
-    } else {
-      console.log("lesser");
-      document.querySelector("#color").classList.remove("color-change")
-
-      document.querySelector("#hire-us").classList.remove("hire-border-change")
-
-    }
+        document
+          .querySelector("#hire-us")
+          .classList.remove("hire-border-change");
+      }
     });
 
     ScrollTrigger.scrollerProxy(scrollEl, {
@@ -60,6 +59,7 @@ export default function useLocoScroll(start) {
         }
         return null;
       },
+
       scrollLeft(value) {
         if (locoScroll) {
           return arguments.length
@@ -69,6 +69,8 @@ export default function useLocoScroll(start) {
         return null;
       },
     });
+
+    // links.addEventListener("click", anchorNav, false);
 
     const lsUpdate = () => {
       if (locoScroll) {

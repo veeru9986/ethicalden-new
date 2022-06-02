@@ -42,7 +42,7 @@ const Nav = styled.nav`
   height: 55px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   z-index: 11;
 
   /* @media (min-width: 1700px) {

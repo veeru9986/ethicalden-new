@@ -116,7 +116,6 @@ function RightSection({ data }) {
       opacity: 0,
       stagger: 0.2,
       ease: "power2",
-      onComplete: () => split.revert(),
     });
     gsap.from("left-section-title1", {
       duration: 1,
