@@ -103,13 +103,13 @@ const Right = ({ open, setOpen, data }) => {
       <UL open={open}>
         {data.map((n, id) => (
           <li key={n.id}>
-            <a
+            <Link
               className={`menu-links`}
               activeClassName="menu-links-active"
               onClick={() => handleClick(n.title)}
             >
               {n.title}
-            </a>
+            </Link>
           </li>
         ))}
       </UL>
