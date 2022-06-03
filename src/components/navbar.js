@@ -50,6 +50,12 @@ const Nav = styled.nav`
   } */
   .logo {
     z-index: 11;
+    @media (max-width: 479px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     svg {
       @media (max-width: 479px) {
         width: 50px;

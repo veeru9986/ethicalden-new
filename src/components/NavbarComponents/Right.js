@@ -5,6 +5,7 @@ import styled from "styled-components";
 import { ButtonStyled, LinkStyled } from "../StyledComponents/Wrapper";
 import LocomotiveScroll from "locomotive-scroll";
 import "../navbar.scss";
+
 const ButtonStyled1 = styled(ButtonStyled)`
   min-width: 100px;
   padding: 1rem 3rem;
@@ -29,6 +30,7 @@ const UL = styled.ul`
     transition: 0.3s ease-in-out;
     color: var(--white);
     font-weight: var(--xmediumWeight);
+    cursor: pointer;
   }
   .menu-links:hover {
     background: var(--background);
@@ -97,19 +99,20 @@ const Right = ({ open, setOpen, data }) => {
     const slider = document.querySelector(`#${newTitle}`);
     var scrollToHere = slider.offsetTop;
     locomotive.scrollTo(scrollToHere, 0, 0);
+    setOpen(!open)
   };
   return (
     <>
       <UL open={open}>
         {data.map((n, id) => (
           <li key={n.id}>
-            <Link
+            <a
               className={`menu-links`}
               activeClassName="menu-links-active"
               onClick={() => handleClick(n.title)}
             >
               {n.title}
-            </Link>
+            </a>
           </li>
         ))}
       </UL>
