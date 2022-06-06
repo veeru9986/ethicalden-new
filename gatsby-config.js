@@ -27,7 +27,7 @@ module.exports = {
         name: `Gatsby Styled Starter`,
         short_name: `Gatsby Styled Starter`,
         description: `Gatsby Styled Starter`,
-        icon: "src/images/icon.png",
+        icon: "src/images/favicon.png",
       },
     },
     // {
