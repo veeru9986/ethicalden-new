@@ -514,7 +514,7 @@ function HireUs() {
               <a href="https://www.facebook.com/ethicalden">
                 <Facebook />
               </a>
-              <a href="https://www.behance.net/ethicalden">
+              <a href="https://www.behance.net/Realethicalden">
                 <Behnace />
               </a>
             </div>

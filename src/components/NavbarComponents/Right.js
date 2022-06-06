@@ -63,6 +63,7 @@ const UL = styled.ul`
     transition: transform 0.3s ease-in-out;
     padding-left: 0;
     z-index: 10;
+    margin-top: 0;
 
     .menu-links {
       color: var(--white);

@@ -1,78 +1,145 @@
 import React from "react";
 import styled from "styled-components";
-import Banner from "../components/Banner";
-import RightSection from "../components/RightSection";
-import LeftSection from "../components/LeftSection";
-import security from "../images/gif/Cyber Security.gif";
-import marketing from "../images/gif/Digital Marketing.gif";
-import education from "../images/gif/Education.gif";
-
 import { Wrapper } from "../components/StyledComponents/Wrapper";
-import Services from "../components/Services";
-import Ourwork from "../components/Ourwork";
-import OurClient from "../components/OurClient";
-import Ourteam from "../components/Ourteam";
-
-const data = [
-  {
-    id: 0,
-    title: "SECURity EXperts",
-    desc: "Knowing the state of your current cybersecurity posture as well as executing on continued cybersecurity initiatives is critical to staying ahead of the constantly evolving risks that are out there. With Audits, Penetration Testing & Security System Architecture and Implementation, Ethical Den can help you better understand where you are now and where you need to be tomorrow.",
-    image: security,
-  },
-  {
-    id: 0,
-    title: "Development EXPERTS",
-    desc: "We create unique & efficient digital solutions that help businesses grow. By bringing the latest IT advancements to various industries, we deliver custom software that completely fits the behavior and needs of our customers. While Ethical Den records continuous growth and expansion, with the software solutions we provide, our customers grow, too.",
-    image: education,
-  },
-  {
-    id: 0,
-    title: "DIGITAL MARKETING",
-    desc: "At Ethical Den, we pride ourselves on digital marketing campaigns that build Brand Equity by using unique insights into your target market. A solid social media marketing strategy supports your wider digital marketing approach. Our team of digital marketing Cosmonauts ensure that your brands' online marketing strategy and planning are prepared to the standards of global best practices and built to achieve your brand's objectives. ",
-    image: marketing,
-  },
-];
-
-// const Wrapper1 = styled(Wrapper)`
-//    grid-area: ;
-// `
+import Facebook from "../assets/facebook.svg";
+import Insta from "../assets/insta.svg";
+import Behance from "../assets/behance.svg";
 
 const Container = styled.div`
-  margin-top: var(--mt);
   grid-area: auto/2/auto/3;
-  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-  @media (min-width: 1700px) {
-    width: 80%;
+  .top-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    font-size: 96px;
+    font-weight: var(--heavyWeight);
+    text-transform: capitalize;
+    background: linear-gradient(
+      135.72deg,
+      #09e5e5 -12.91%,
+      #12e6dc -0.28%,
+      #2beac5 20.76%,
+      #55f1a0 48.11%,
+      #8efa6d 79.68%,
+      #a8ff57 92.3%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      font-size: 48px;
+    }
+  }
+  p {
+    text-align: center;
+    width: 65%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    @media (max-width: 767px) {
+      font-size: var(--p1);
+      width: 90%;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+  }
+  .social-icons {
+    display: flex;
+    align-items: center;
+    @media (max-width: 479px) {
+      position: unset;
+      margin-top: 3rem;
+    }
+    a {
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    svg {
+      margin-right: 1rem;
+
+      @media (max-width: 479px) {
+        width: 25px;
+      }
+    }
+    a:hover {
+      svg,
+      path {
+        fill: var(--green);
+      }
+
+      #my-cool-gradient {
+        --color-stop: #f12c06;
+        --color-bot: #faed34;
+      }
+    }
+  }
+  .company-details {
+    margin-top: -2rem;
+    h6 {
+      color: var(--white);
+      font-size: 18px;
+      margin-top: 0;
+      font-weight: 400;
+      @media (max-width: 479px) {
+        font-size: 16px !important;
+      }
+    }
   }
 `;
 
-const Container1 = styled(Container)`
-  grid-area: auto/1/auto/4;
-  margin-top: 0;
-  @media (min-width: 1700px) {
-    width: 100%;
-  }
-`;
-
-function Index() {
+function UnderConstruction() {
+  const d = new Date();
+  let year = d.getFullYear()
   return (
     <Wrapper>
-      <Container1>
-        <Banner />
-      </Container1>
       <Container>
-        <RightSection data={data[0]} kId="aboutus" />
-        <LeftSection data={data[1]} />
-        <RightSection data={data[2]} />
-        <Services kId="services" />
-        <Ourwork kId="ourwork" />
-        <OurClient kId="education" />
-        <Ourteam />
+        <div className="top-container">
+          <h1>Under construction</h1>
+          <p>
+            This will be worth the wait. We’re adding the finishing touches. See
+            what curiosity is capable of creating. Something may work on paper,
+            but that means nothing if it flounders in the real world!
+          </p>
+        </div>
+
+        <div className="container">
+          <div className="social-icons" data-scroll data-scroll-speed="-1.7">
+          <a href="https://www.instagram.com/ethical.den/?utm_medium=copy_link">
+                <Insta />
+              </a>
+              <a href="https://www.facebook.com/ethicalden">
+                <Facebook />
+              </a>
+              <a href="https://www.behance.net/Realethicalden">
+                <Behance />
+              </a>
+          </div>
+          <div className="company-details">
+            <h6 id="footer-1">© {year}, Ethical Den, all rights reserved</h6>
+          </div>
+        </div>
       </Container>
     </Wrapper>
   );
 }
 
-export default Index;
+export default UnderConstruction;

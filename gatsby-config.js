@@ -30,7 +30,28 @@ module.exports = {
         icon: "src/images/icon.png",
       },
     },
-
+    // {
+    //   resolve: `gatsby-source-mysql`,
+    //   options: {
+    //     connectionDetails: {
+    //       host: '192.163.205.187',
+    //       user: 'ethicald_gatsby',
+    //       password: 'ethicalden$2022',
+    //       database: 'ethicald_den'
+    //     },
+    //     queries: [
+    //       {
+    //         statement: 'SELECT * FROM client',
+    //         name: 'client',
+    //         idFieldName: 'alias',
+    //       },{
+    //         statement: 'SELECT * FROM review',
+    //         name: 'review',
+    //         idFieldName: 'id',
+    //       }
+    //     ]
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
