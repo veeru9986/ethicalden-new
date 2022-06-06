@@ -83,7 +83,7 @@ const Container = styled.div`
     a:hover {
       svg,
       path {
-        fill: var(--green);
+        fill: var(--greenColor);
       }
 
       #my-cool-gradient {
