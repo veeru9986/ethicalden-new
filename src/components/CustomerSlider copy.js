@@ -1,7 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
-
+import { StaticImage } from "gatsby-plugin-image";
+import client1 from "../images/Clients/AKPS Logo.png";
+import client2 from "../images/Clients/Devine.png";
+import client3 from "../images/Clients/E-laj.png";
+import client4 from "../images/Clients/Hero.png";
+import client5 from "../images/Clients/Lassi Jn.png";
+import client6 from "../images/Clients/Mr Tandoor.png";
+import client7 from "../images/Clients/Prakrithi Study.png";
+import client8 from "../images/Clients/Roaderr.png";
+import client9 from "../images/Clients/S Fashion.png";
+import client10 from "../images/Clients/Table Talk.png";
+import client11 from "../images/Clients/The Roof.png";
+import client12 from "../images/Clients/Wonderlite.png";
 const Container = styled.div`
   margin-bottom: 2rem;
   .box {
@@ -12,7 +24,6 @@ const Container = styled.div`
   .box-1 {
     width: 195px;
     height: 195px;
-    background-color: #c4c4c4;
 
     @media (max-width: 489px) {
       width: 100px;
@@ -74,28 +85,64 @@ function CustomerSlider({ data, title, testPage }) {
     <Container>
       <Slider {...settings}>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/Clients/AKPS Logo.png" />
+          </div>
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/Clients/Devine.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/Clients/E-laj.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/Clients/Hero.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/Clients/Lassi Jn.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/Clients/Mr Tandoor.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/Clients/Prakrithi Study.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/Clients/Roaderr.png" />
+          </div>
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/Clients/S Fashion.png" />
+          </div>
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/Clients/Table Talk.png" />
+          </div>
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/Clients/The Roof.png" />
+          </div>
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/Clients/Wonderlite.png" />
+          </div>
         </div>
       </Slider>
     </Container>

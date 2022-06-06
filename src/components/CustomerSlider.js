@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Container = styled.div`
   margin-bottom: 2rem;
@@ -12,7 +13,6 @@ const Container = styled.div`
   .box-1 {
     width: 195px;
     height: 195px;
-    background-color: #c4c4c4;
 
     @media (max-width: 489px) {
       width: 100px;
@@ -74,28 +74,69 @@ function CustomerSlider({ data, title, testPage }) {
     <Container>
       <Slider {...settings}>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/team/Arihant Gupta.png" />
+          </div>
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/team/Arpita Mitra.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/team/Fardeen Ahmed.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/team/Group 46.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/team/khokon halder.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/team/Krishanu Saha.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/team/Nazmul islam.png" />
+          </div>{" "}
         </div>
         <div className="box">
-          <div className="box-1" />
+          <div className="box-1">
+            <StaticImage src="../images/team/Praveen Rathan.png" />
+          </div>{" "}
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/team/Sagnik Roy.png" />
+          </div>{" "}
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/team/Sajal Ahmed.png" />
+          </div>{" "}
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/team/Sanjana Akter.png" />
+          </div>{" "}
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/team/Shehnaz Sultana.png" />
+          </div>{" "}
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/team/Yathish Suresh.png" />
+          </div>{" "}
         </div>
       </Slider>
     </Container>
