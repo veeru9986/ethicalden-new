@@ -12,7 +12,6 @@ const Container = styled.div`
   }
   .box-1 {
     width: 195px;
-    height: 195px;
 
     @media (max-width: 489px) {
       width: 100px;
