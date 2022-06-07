@@ -37,12 +37,12 @@ function Layout({ children, location }) {
   const id = React.useRef(null);
   const clear = () => {
     window.clearInterval(id.current);
-    isFontListLoaded && setPreloader(true);
+    setPreloader(true);
   };
   React.useEffect(() => {
     id.current = window.setInterval(() => {
       setTimer((timer) => timer - 1);
-    }, 2000);
+    }, 1500);
   }, []);
 
   React.useEffect(() => {
