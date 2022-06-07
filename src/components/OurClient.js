@@ -3,14 +3,6 @@ import styled from "styled-components";
 import CustomerSlider from "./CustomerSlider copy";
 
 
-
-// const data = [
-//   {
-//     id:1,
-//     image: client1
-//   },
-
-// ]
 const Wrapper = styled.div`
   margin-top: 9rem;
 

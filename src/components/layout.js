@@ -42,7 +42,10 @@ function Layout({ children, location }) {
   React.useEffect(() => {
     id.current = window.setInterval(() => {
       setTimer((timer) => timer - 1);
-    }, 1500);
+    }, 1150);
+    document.addEventListener("contextmenu", (event) => {
+      event.preventDefault();
+    });
   }, []);
 
   React.useEffect(() => {

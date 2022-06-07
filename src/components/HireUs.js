@@ -503,6 +503,11 @@ function HireUs() {
               hello@ethicalden.com
             </p>
           </div>
+          <div className="email">
+            <p id="footer-1" className={cn({ "is-reveal": reveal })}>
+            +91 9547578920
+            </p>
+          </div>
           <div className="follow-wrapper">
             <h5 id="footer-1-text" className={cn({ "is-reveal": reveal })}>
               Follow

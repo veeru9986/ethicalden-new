@@ -51,17 +51,22 @@ const Container = styled.div`
 
 function Preloader() {
   // POST PRE LOADER
+
   const green_bg = () => {
     gsap.to(".loader_bg", {
-      zIndex: 0,
+      opacity: 0,
+      zIndex: -1,
+      background: "none",
     });
     gsap.to(".loader_bg_color_black", {
+      duration: 1,
       ease: "power4.out",
       x: -2000,
+      delay: 0.5,
     });
 
     gsap.to(".loader_bg_color", {
-      duration: 2,
+      duration: 1.5,
       ease: "power4.out",
       x: -2000,
       delay: 1,

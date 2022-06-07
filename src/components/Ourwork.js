@@ -1,7 +1,10 @@
 import { Link } from "gatsby";
 import React from "react";
 import styled from "styled-components";
-import client from "../images/ourwork.png";
+import image1 from "../images/image1.png";
+import image2 from "../images/image2.png";
+import image3 from "../images/image3.png";
+import image4 from "../images/image4.png";
 
 const Wrapper = styled.div`
   margin-top: 9rem;
@@ -101,28 +104,28 @@ const Wrapper = styled.div`
   }
 `;
 
-function Ourwork({kId}) {
+function Ourwork({ kId }) {
   return (
     <Wrapper>
       <div className="heading" id={kId}>
         <h5>Our work</h5>
       </div>
       <div className="our-clients-wrapper">
-        <div className="image" style={{ backgroundImage: `url(${client})` }}>
-          <h4>Name of the company or Client</h4>
+        <div className="image" style={{ backgroundImage: `url(${image1})` }}>
+          <h4>E-laj</h4>
+          <span>Branding , App Design, UI UX</span>
+        </div>
+        <div className="image-1" style={{ backgroundImage: `url(${image2})` }}>
+          <h4>Roaderr</h4>
           <span>Branding, Web Design</span>
         </div>
-        <div className="image-1" style={{ backgroundImage: `url(${client})` }}>
-          <h4>Name of the company or Client</h4>
-          <span>Branding, Web Design</span>
+        <div className="image-2" style={{ backgroundImage: `url(${image3})` }}>
+          <h4>Dream Health</h4>
+          <span>Branding , Web Design, UI UX</span>
         </div>
-        <div className="image-2" style={{ backgroundImage: `url(${client})` }}>
-          <h4>Name of the company or Client</h4>
-          <span>Branding, Web Design</span>
-        </div>
-        <div className="image-3" style={{ backgroundImage: `url(${client})` }}>
-          <h4>Name of the company or Client</h4>
-          <span>Branding, Web Design</span>
+        <div className="image-3" style={{ backgroundImage: `url(${image4})` }}>
+          <h4>Wonderlite</h4>
+          <span>Branding , Web Design, Social Media Marketing</span>
         </div>
       </div>
       <div className="see-all-our-work">
