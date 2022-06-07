@@ -76,7 +76,7 @@ function Layout({ children, location }) {
             data-scroll-container
           >
             {children}
-            {!location.pathname.match("/home-v1") ? null : (
+            {!location.pathname.match("/under-construction") ? null : (
               <Footer />
             )}
           </div>
