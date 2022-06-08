@@ -8,6 +8,7 @@ import gsap from "gsap";
 import cn from "classnames";
 import useOnScreen from "../hooks/useOnScreen";
 import "./service.scss";
+import { useForm, ValidationError } from "@formspree/react";
 
 const Wrapper = styled.div`
   margin-top: 9rem;
@@ -63,6 +64,7 @@ const Wrapper = styled.div`
           background: var(--background);
           color: var(--black);
           transition: all 0.2s ease;
+          outline: none;
         }
         .names {
           margin-right: 1.5rem;
@@ -305,7 +307,8 @@ const Wrapper = styled.div`
   }
 `;
 
-function HireUs() {
+function HireUs({ kId }) {
+  const [state, handleSubmit] = useForm("moqrbepk");
   const ref = React.useRef();
   const [reveal, setReveal] = React.useState(false);
   const [selectText, setSelectText] = React.useState("");
@@ -331,9 +334,7 @@ function HireUs() {
       ease: "power2",
     });
   }, [reveal]);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+
   const handleClick = (e) => {
     e.preventDefault();
     console.log(e.target.innerHTML);
@@ -347,7 +348,7 @@ function HireUs() {
   };
 
   return (
-    <Wrapper>
+    <Wrapper id={kId}>
       <div className={cn("grid-1-wrapper", { "is-reveal": reveal })} ref={ref}>
         <div className="heading">
           <h5
@@ -477,18 +478,50 @@ function HireUs() {
           </div>
         </div>
         <div className="form-wrapper">
-          <form onSubmit={handleSubmit}>
-            <div className="name-input">
-              <input type="name" placeholder="name" required />
-            </div>
-            <div className="email-input">
-              <input type="email" placeholder="email" required />
-            </div>
-            <div className="project-input">
-              <input type="text" placeholder="project details" required />
-            </div>
-            <button type="submit">submit</button>
-          </form>
+          {state.succeeded ? (
+            <p>Thanks for joining.</p>
+          ) : (
+            <form onSubmit={handleSubmit}>
+              <div className="name-input">
+                <input
+                  type="name"
+                  placeholder="name"
+                  required
+                  name="name"
+                  id="name"
+                />
+              </div>
+              <div style={{visibility: "hidden"}}>
+                <input
+                  type="name"
+                  placeholder="service"
+                  hidden
+                  name="service"
+                  id="service"
+                  value={selectText}
+                />
+              </div>
+              <div className="email-input">
+                <input
+                  type="email"
+                  placeholder="email"
+                  id="email"
+                  name="email"
+                  required
+                />
+              </div>
+              <div className="project-input">
+                <input
+                  type="text"
+                  placeholder="project details"
+                  name="projet details"
+                  id="project details"
+                  required
+                />
+              </div>
+              <button type="submit">submit</button>
+            </form>
+          )}
         </div>
       </div>
       <div className="grid-2-wrapper">
@@ -505,7 +538,7 @@ function HireUs() {
           </div>
           <div className="email">
             <p id="footer-1" className={cn({ "is-reveal": reveal })}>
-            +91 9547578920
+              +91 9547578920
             </p>
           </div>
           <div className="follow-wrapper">

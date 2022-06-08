@@ -74,7 +74,7 @@ const UL = styled.ul`
 const Right = ({ open, setOpen, data }) => {
   console.log(data[0].title);
   const handleClick = (title) => {
-    const newTitle = title.split(" ").join('')
+    const newTitle = title.split(" ").join("");
     const scrollEl = document.querySelector("#main-container");
     let locomotive = new LocomotiveScroll({
       el: scrollEl,
@@ -99,29 +99,41 @@ const Right = ({ open, setOpen, data }) => {
     });
     const slider = document.querySelector(`#${newTitle}`);
     var scrollToHere = slider.offsetTop;
-    locomotive.scrollTo(scrollToHere, 0, 0);
-    setOpen(!open)
+    locomotive.scrollTo(scrollToHere - 130, 0, 0);
+    setOpen(!open);
   };
   return (
     <>
       <UL open={open}>
-        {data.map((n, id) => (
-          <li key={n.id}>
-            <a
-              className={`menu-links`}
-              activeClassName="menu-links-active"
-              onClick={() => handleClick(n.title)}
-            >
-              {n.title}
-            </a>
-          </li>
-        ))}
+        {data.map((n, id) =>
+          n.title !== "education" ? (
+            <li key={n.id}>
+              <a
+                className={`menu-links`}
+                activeClassName="menu-links-active"
+                onClick={() => handleClick(n.title)}
+              >
+                {n.title}
+              </a>
+            </li>
+          ) : (
+            <li key={n.id}>
+              <a
+                className={`menu-links`}
+                activeClassName="menu-links-active"
+                href="/under-construction"
+              >
+                {n.title}
+              </a>
+            </li>
+          )
+        )}
       </UL>
       <UL>
         <li>
           <ButtonStyled1
             to="/sign-in"
-            onClick={() => setOpen(!open)}
+            onClick={() => handleClick("hireus")}
             id="hire-us"
           >
             hire us

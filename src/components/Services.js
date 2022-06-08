@@ -67,7 +67,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function Services({kId}) {
+function Services({ kId }) {
   const ref = React.useRef();
   const [reveal, setReveal] = React.useState(false);
 
@@ -98,7 +98,7 @@ function Services({kId}) {
   }, [reveal]);
   return (
     <Wrapper data-scroll>
-      <div ref={ref} className={cn("service-wrapper", { "is-reveal": reveal })} id={kId}>
+      <div ref={ref} className={cn("service-wrapper", { "is-reveal": reveal })}>
         <div className="heading">
           <h5 id="para1-text" ref={ref} className={cn({ "is-reveal": reveal })}>
             Services

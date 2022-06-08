@@ -14,11 +14,11 @@ const Container = styled.div`
     width: 80%;
   }
 `;
-function Footer() {
+function Footer({ kId }) {
   return (
     <FooterWrapper>
-      <Container>
-        <HireUs />
+      <Container >
+        <HireUs kId={kId} />
       </Container>
     </FooterWrapper>
   );

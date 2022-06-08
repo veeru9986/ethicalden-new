@@ -77,7 +77,7 @@ function Layout({ children, location }) {
           >
             {children}
             {location.pathname.match("/under-construction") ? null : (
-              <Footer />
+              <Footer kId="hireus" />
             )}
           </div>
         </div>

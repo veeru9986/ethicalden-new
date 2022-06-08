@@ -66,9 +66,11 @@ function Index() {
         <RightSection data={data[0]} kId="aboutus" />
         <LeftSection data={data[1]} />
         <RightSection data={data[2]} />
-        <Services kId="services" />
+        <div id="services">
+          <Services />
+        </div>
         <Ourwork kId="ourwork" />
-        <OurClient kId="education" />
+        <OurClient />
         <Ourteam />
       </Container>
     </Wrapper>
