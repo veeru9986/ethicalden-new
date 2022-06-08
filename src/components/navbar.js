@@ -116,9 +116,9 @@ function Navbar(props) {
     >
       <Nav>
         <div className="logo">
-          <Link to="/" style={{ display: "flex" }}>
+          <a href="/" style={{ display: "flex" }}>
             <Logo className="logo" />
-          </Link>
+          </a>
         </div>
         <Burger data={navData} />
       </Nav>

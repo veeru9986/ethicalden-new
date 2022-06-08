@@ -40,12 +40,18 @@ const Container = styled.div`
 
   .loader {
     color: #ffff;
-    font-family: "Poppins", sans-serif;
     font-size: 3rem;
     font-weight: 700 !important;
     letter-spacing: 2px;
     text-align: center;
-    margin-top: 18rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 479px){
+      font-size: 2rem;
+    }
   }
 `;
 

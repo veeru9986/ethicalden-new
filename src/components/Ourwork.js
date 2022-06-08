@@ -129,7 +129,7 @@ function Ourwork({ kId }) {
         </div>
       </div>
       <div className="see-all-our-work">
-        <Link to="/">See all our work {`>`}</Link>
+        <a href="/under-construction/">See all our work {`>`}</a>
       </div>
     </Wrapper>
   );

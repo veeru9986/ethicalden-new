@@ -58,8 +58,8 @@ export const ButtonStyled = styled.button`
   cursor: pointer;
 
   &:hover {
-    background: ${(props) => (props.primary ? "#fff" : "var(--background)")};
+    background: ${(props) => (props.primary ? "#fff" : "var(--background) !important")};
     border-color: ${(props) => (props.primary ? "var(--lightRed)" : "none")};
-    color: ${(props) => (props.primary ? "#000" : "var(--blcak)")};
+    color: ${(props) => (props.primary ? "#000" : "var(--black)")};
   }
 `;
