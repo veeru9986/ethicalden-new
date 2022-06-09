@@ -180,6 +180,8 @@ const Wrapper = styled.div`
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
+    padding-bottom: 5rem;
+
     @media (max-width: 479px) {
       grid-area: auto/1/auto/3;
       padding-left: 0;
@@ -218,7 +220,6 @@ const Wrapper = styled.div`
       font-size: 20px;
       line-height: 28px;
       /* identical to box height, or 140% */
-
       letter-spacing: 0.01em;
       opacity: 0;
       div {
@@ -491,7 +492,7 @@ function HireUs({ kId }) {
                   id="name"
                 />
               </div>
-              <div style={{visibility: "hidden"}}>
+              <div style={{ visibility: "hidden" }}>
                 <input
                   type="name"
                   placeholder="service"
@@ -566,7 +567,11 @@ function HireUs({ kId }) {
             we're your partner.
           </p>
           <div className="company-details">
-            <h6 id="footer-1" className={cn({ "is-reveal": reveal })}>
+            <h6
+              id="footer-1"
+              className={cn({ "is-reveal": reveal })}
+              style={{ marginBottom: 0 }}
+            >
               © 2022, Ethical Den, all rights reserved
             </h6>
           </div>

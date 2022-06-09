@@ -38,6 +38,12 @@ const Wrapper = styled.div`
         font-size: 0.875rem;
       }
     }
+    .image,
+    .image-1,
+    .image-2,
+    .image-3 {
+      width: 480px;
+    }
     .image {
       background-position: center;
       background-size: cover;
@@ -81,6 +87,7 @@ const Wrapper = styled.div`
       .image-1,
       .image-2,
       .image-3 {
+        width: auto;
         grid-area: auto/1/auto/3;
         height: 450px;
         margin-bottom: 2.5rem;
@@ -113,19 +120,27 @@ function Ourwork({ kId }) {
       <div className="our-clients-wrapper">
         <div className="image" style={{ backgroundImage: `url(${image1})` }}>
           <h4>E-laj</h4>
-          <span>Branding , App Design, UI UX</span>
+          <div style={{ marginTop: ".5rem" }}>
+            <span>Branding , App Design, UI UX</span>
+          </div>
         </div>
         <div className="image-1" style={{ backgroundImage: `url(${image2})` }}>
           <h4>Roaderr</h4>
-          <span>Branding, Web Design</span>
+          <div style={{ marginTop: ".5rem" }}>
+            <span>Branding, Web Design</span>
+          </div>
         </div>
         <div className="image-2" style={{ backgroundImage: `url(${image3})` }}>
           <h4>Dream Health</h4>
-          <span>Branding , Web Design, UI UX</span>
+          <div style={{ marginTop: ".5rem" }}>
+            <span>Branding , Web Design, UI UX</span>
+          </div>
         </div>
         <div className="image-3" style={{ backgroundImage: `url(${image4})` }}>
           <h4>Wonderlite</h4>
-          <span>Branding , Web Design, Social Media Marketing</span>
+          <div style={{ marginTop: ".5rem" }}>
+            <span>Branding , Web Design, Social Media Marketing</span>
+          </div>
         </div>
       </div>
       <div className="see-all-our-work">

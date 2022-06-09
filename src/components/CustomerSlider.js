@@ -9,14 +9,17 @@ const Container = styled.div`
     padding: 1rem;
     display: flex !important;
     justify-content: center;
+    @media (max-width: 489px) {
+      width: 188px  !important;
+     } 
   }
   .box-1 {
     width: 195px;
-
+/* 
     @media (max-width: 489px) {
       width: 100px;
       height: 100px;
-    }
+    } */
   }
   .slick-dots li button:before {
     color: #fff !important;
@@ -63,7 +66,7 @@ function CustomerSlider({ data, title, testPage }) {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
