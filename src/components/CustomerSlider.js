@@ -140,6 +140,16 @@ function CustomerSlider({ data, title, testPage }) {
             <StaticImage src="../images/team/Yathish Suresh.png" />
           </div>{" "}
         </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/team/Samrat Singha.png" />
+          </div>{" "}
+        </div>
+        <div className="box">
+          <div className="box-1">
+            <StaticImage src="../images/team/Sourav Karn.png" />
+          </div>{" "}
+        </div>
       </Slider>
     </Container>
   );

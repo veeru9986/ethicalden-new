@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../assets/logo.svg";
+import logo from "../images/logo.png";
 import Burger from "./NavbarComponents/Burger";
 import { Link } from "gatsby";
 import "./navbar.scss";
@@ -50,12 +50,19 @@ const Nav = styled.nav`
   } */
   .logo {
     z-index: 11;
-    @media (max-width: 479px) {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    img {
+      width: 60px;
+
+      @media (max-width: 479px){
+        width: 55px;
       }
+    }
+    @media (max-width: 479px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     svg {
       @media (max-width: 479px) {
         width: 50px;
@@ -117,7 +124,7 @@ function Navbar(props) {
       <Nav>
         <div className="logo">
           <a href="/" style={{ display: "flex" }}>
-            <Logo className="logo" />
+            <img src={logo} alt="ethical den" />
           </a>
         </div>
         <Burger data={navData} />
