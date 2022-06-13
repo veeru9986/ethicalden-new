@@ -12,6 +12,7 @@ import Services from "../components/Services";
 import Ourwork from "../components/Ourwork";
 import OurClient from "../components/OurClient";
 import Ourteam from "../components/Ourteam";
+import Seo from "../components/Seo/Seo";
 
 const data = [
   {
@@ -56,9 +57,27 @@ const Container1 = styled(Container)`
   }
 `;
 
-function Index() {
+function Index({ location }) {
+  const keys = [
+    "cyber security services",
+    "cyber servurity",
+    "web development",
+    "ui/ux",
+    "digital marketing agency",
+    "ethical den",
+    "ethicalden",
+    "den",
+  ];
+
   return (
     <Wrapper>
+      <Seo
+        title="Cyber Security Service | Web Development | UI/UX | Digital Marketing | SEO"
+        description="We're the best digital marketing agency from West Bengal, curating experiences that users fall in love with"
+        image="https://ethicalden.com/logo.png"
+        location={`${location.pathname}`}
+        keywords={keys}
+      />{" "}
       <Container1>
         <Banner />
       </Container1>

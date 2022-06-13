@@ -5,14 +5,15 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Styled Starter",
-    titleTemplate: "Gatsby Styled Starter",
-    description: "Gatsby Styled Starter",
+    title: "Ethical Den",
+    titleTemplate: "Ethical Den",
+    description:
+      "We're the best digital marketing agency from West Bengal, curating experiences that users fall in love with",
     image: "/icon.png",
-    siteUrl: "https://gatsbyjs.com",
-    author: "veeresh",
+    siteUrl: "https://ethicalden.com",
+    author: "ethicalden",
     authorSite: "",
-    twitterUsername: "@veeresh",
+    twitterUsername: "@ethicalden",
   },
   plugins: [
     "gatsby-plugin-styled-components",
