@@ -6,7 +6,6 @@ import Behance from "../assets/behance.svg";
 import banner from "../images/banner.png";
 import gsap from "gsap";
 import SplitText from "../utils/Split3.min.js";
-
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: 5% 1fr 5%;
@@ -81,6 +80,7 @@ const Wrapper = styled.div`
       font-size: var(--h1);
       font-weight: var(--heavyWeight);
       text-transform: capitalize;
+      white-space: pre-line;
       background: linear-gradient(
         135.72deg,
         #09e5e5 -12.91%,
@@ -199,7 +199,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function Banner() {
+function Banner({ hero }) {
   // let container = useRef();
   // useEffect(() => {
   //   new LocomotiveScroll({
@@ -234,6 +234,8 @@ function Banner() {
     });
   }, []);
 
+
+
   return (
     <Wrapper style={{ backgroundImage: `url(${banner}) ` }}>
       <div className="wrapper-wrapper">
@@ -244,20 +246,17 @@ function Banner() {
             data-scroll-speed="3"
             data-scroll-offset="100"
           >
-            innovative Cyber Agency
+            {hero.title}
           </h1>
           <div className="scroller" data-scroll data-scroll-speed="2">
-            <span>
-              artificial intelligence <br /> cyber security <br /> web
-              development <br />
-              digital marketing <br />
-            </span>
+        
+            <span>{hero.hero_services.map(h =>`${h.title}\n` )}</span>
+    
           </div>
         </div>
         <div className="divider" />
         <p data-scroll id="p">
-          We're the best digital marketing agency from West Bengal, curating
-          experiences that users fall in love with
+          {hero.description}
         </p>
         <div className="social-icons" data-scroll data-scroll-speed="-1.7">
           <a href="https://www.instagram.com/ethical.den/?utm_medium=copy_link">

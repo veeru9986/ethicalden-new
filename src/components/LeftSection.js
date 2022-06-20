@@ -140,13 +140,13 @@ function RightSection({ data }) {
         </div>
         <div className="para">
           <p id="left-section-title" className={cn({ "is-reveal": reveal })}>
-            {data.desc}{" "}
+            {data.description}
           </p>
         </div>
       </div>
       <div className="left-section" data-scroll data-scroll-speed="2">
         <div className="image">
-          <img src={data.image} alt={data.title} />
+          <img src={data.media.data.attributes.url} alt={data.title} />
         </div>{" "}
       </div>
     </Wrapper>

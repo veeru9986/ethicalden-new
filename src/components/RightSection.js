@@ -128,12 +128,12 @@ function RightSection({ data, kId }) {
           </h4>
         </div>
         <p id="right-para1" className={cn({ "is-reveal": reveal })} ref={ref}>
-          {data.desc}
+          {data.description}
         </p>
       </div>
       <div className="left-section" data-scroll data-scroll-speed="2">
         <div className="image">
-          <img src={data.image} alt={data.title} />
+          <img src={data.media.data.attributes.url} alt={data.title} />
           </div>
       </div>
     </Wrapper>

@@ -31,6 +31,12 @@ module.exports = {
         icon: "src/images/favicon.png",
       },
     },
+    {
+      resolve: "gatsby-source-custom-api",
+      options: {
+        url: "https://warm-dawn-95960.herokuapp.com/api/home?populate=deep",
+      },
+    },
     // {
     //   resolve: `gatsby-source-mysql`,
     //   options: {

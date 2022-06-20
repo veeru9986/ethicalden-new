@@ -14,6 +14,8 @@ const Wrapper = styled.div`
   margin-top: 9rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
+  height: 100%;
+  margin-bottom: 2rem;
 
   .grid-1-wrapper {
     grid-area: auto/1/auto/2;

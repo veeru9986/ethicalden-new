@@ -67,7 +67,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function Services({ kId }) {
+function Services({ kId, services }) {
   const ref = React.useRef();
   const [reveal, setReveal] = React.useState(false);
 
@@ -101,86 +101,27 @@ function Services({ kId }) {
       <div ref={ref} className={cn("service-wrapper", { "is-reveal": reveal })}>
         <div className="heading">
           <h5 id="para1-text" ref={ref} className={cn({ "is-reveal": reveal })}>
-            Services
+            {services.title}
           </h5>
         </div>
         <div className="sub-heading">
           <h2 id="para1-text" ref={ref} className={cn({ "is-reveal": reveal })}>
-            Develop, Exhibit, Secure
+            {services.main_title}
           </h2>
         </div>
         <div className="para">
           <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-            Welcome to Ethical Den - The Strategic Digital Company. We are a
-            brand and digital consultancy based in India, partnering globally
-            with leaders across industries to build future products, services,
-            and brands. Working for the unknown since 2021. Our services span a
-            wide variety of audiences and capabilities, but all of them are
-            rooted in inspiring ideas, human connection, and writing your
-            brand's future. The world is changing fast. We help you keep up
+            {services.description}
           </p>
         </div>
         <div className="services-names">
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Cyber Security Services
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Web Development
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Digital Marketing
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Search Engine Optimization
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              UI/UX Development
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Branding
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Artifical Intelligence
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Mobile app Development
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Film Production{" "}
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Video Editing
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Software Solutions
-            </p>
-          </div>
-          <div className="names">
-            <p id="para" ref={ref} className={cn({ "is-reveal": reveal })}>
-              Engagement Campaigns
-            </p>
-          </div>
+          {services.service_names.map((s) => (
+            <div className="names" id={s.id}>
+              <p id="para" ref={ref} className={cn({ "is-reveal": reveal })} >
+                {s.title}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </Wrapper>

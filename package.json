@@ -35,6 +35,7 @@
     "gatsby-plugin-sitemap": "^5.7.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-styled-components": "^5.7.0",
+    "gatsby-source-custom-api": "^2.3.6",
     "gatsby-source-filesystem": "^4.7.0",
     "gatsby-source-mysql": "^2.2.3",
     "gatsby-source-strapi": "^1.0.3",

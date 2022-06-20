@@ -6,7 +6,7 @@ import LeftSection from "../components/LeftSection";
 import security from "../images/gif/Cyber Security.gif";
 import marketing from "../images/gif/Digital Marketing.gif";
 import education from "../images/gif/Education.gif";
-
+import { graphql } from "gatsby";
 import { Wrapper } from "../components/StyledComponents/Wrapper";
 import Services from "../components/Services";
 import Ourwork from "../components/Ourwork";
@@ -14,7 +14,7 @@ import OurClient from "../components/OurClient";
 import Ourteam from "../components/Ourteam";
 import Seo from "../components/Seo/Seo";
 
-const data = [
+const dataS = [
   {
     id: 0,
     title: "SECURity EXperts",
@@ -57,7 +57,7 @@ const Container1 = styled(Container)`
   }
 `;
 
-function Index({ location }) {
+function Index({ location, data }) {
   const keys = [
     "cyber security services",
     "cyber servurity",
@@ -69,6 +69,8 @@ function Index({ location }) {
     "den",
   ];
 
+  const { hero, about_us, services } = data.attributes;
+
   return (
     <Wrapper>
       <Seo
@@ -79,14 +81,19 @@ function Index({ location }) {
         keywords={keys}
       />{" "}
       <Container1>
-        <Banner />
+        <Banner hero={hero} />
       </Container1>
       <Container>
-        <RightSection data={data[0]} kId="aboutus" />
-        <LeftSection data={data[1]} />
-        <RightSection data={data[2]} />
+        {about_us.map((a, id) =>
+          (id + 1) % 2 !== 0 ? (
+            <RightSection data={a} kId="aboutus" />
+          ) : (
+            <LeftSection data={a} />
+          )
+        )}
+
         <div id="services">
-          <Services />
+          <Services services={services} />
         </div>
         <Ourwork kId="ourwork" />
         <OurClient />
@@ -97,3 +104,39 @@ function Index({ location }) {
 }
 
 export default Index;
+
+export const query = graphql`
+  {
+    attributes {
+      hero {
+        title
+        description
+        hero_services {
+          id
+          title
+        }
+      }
+      about_us {
+        title
+        id
+        description
+        media {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+      }
+      services {
+        description
+        title
+        main_title
+        service_names {
+          id
+          title
+        }
+      }
+    }
+  }
+`;
