@@ -5,6 +5,7 @@ import Logo from "../assets/logo.svg";
 import { footerNavigationItems } from "../constants/footer-item";
 import { Link } from "gatsby";
 import HireUs from "./HireUs";
+import { useStaticQuery, graphql } from "gatsby";
 
 const FooterWrapper = styled(Wrapper)``;
 
@@ -15,13 +16,50 @@ const Container = styled.div`
   }
 `;
 function Footer({ kId }) {
+  const data = useStaticQuery(graphql`
+    {
+      attributes {
+        phone
+        email
+        footer {
+          title
+          sub_title
+          services {
+            id
+            title
+          }
+        }
+        description
+      }
+    }
+  `);
+
+  const { footer, phone, email, description } = data.attributes;
   return (
     <FooterWrapper>
-      <Container >
-        <HireUs kId={kId} />
+      <Container>
+        <HireUs
+          kId={kId}
+          footer={footer}
+          phone={phone}
+          email={email}
+          description={description}
+        />
       </Container>
     </FooterWrapper>
   );
 }
 
 export default Footer;
+
+// phone
+// email
+// footer {
+//   title
+//   sub_title
+//   services {
+//     id
+//     title
+//   }
+// }
+// description

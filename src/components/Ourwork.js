@@ -38,13 +38,13 @@ const Wrapper = styled.div`
         font-size: 0.875rem;
       }
     }
-    .image,
+    .image-0,
     .image-1,
     .image-2,
     .image-3 {
       width: 480px;
     }
-    .image {
+    .image-0 {
       background-position: center;
       background-size: cover;
       grid-area: 1/1/3/2;
@@ -72,10 +72,34 @@ const Wrapper = styled.div`
       border-radius: 7.84528px;
       padding: 2rem;
     }
-    .image,
+    .image-4 {
+      background-position: center;
+      background-size: cover;
+      grid-area: 6/2/8/3;
+      border-radius: 7.84528px;
+      padding: 2rem;
+    }
+    .image-5 {
+      background-position: center;
+      background-size: cover;
+      grid-area: 6/2/8/3;
+      border-radius: 7.84528px;
+      padding: 2rem;
+    }
+    .image-6 {
+      background-position: center;
+      background-size: cover;
+      grid-area: 6/2/8/3;
+      border-radius: 7.84528px;
+      padding: 2rem;
+    }
+    .image-0,
     .image-1,
     .image-2,
-    .image-3 {
+    .image-3,
+    .image-4,
+    .image-5,
+    .image-6 {
       transition: transform 500ms ease-in-out 25ms;
 
       &:hover {
@@ -83,10 +107,13 @@ const Wrapper = styled.div`
       }
     }
     @media (max-width: 479px) {
-      .image,
+      .image-0,
       .image-1,
       .image-2,
-      .image-3 {
+      .image-3,
+      .image-4,
+      .image-5,
+      .image-6 {
         width: auto;
         grid-area: auto/1/auto/3;
         height: 450px;
@@ -111,20 +138,29 @@ const Wrapper = styled.div`
   }
 `;
 
-function Ourwork({ kId }) {
+function Ourwork({ kId, our_work }) {
   return (
     <Wrapper>
       <div className="heading" id={kId}>
         <h5>Our work</h5>
       </div>
       <div className="our-clients-wrapper">
-        <div className="image" style={{ backgroundImage: `url(${image1})` }}>
-          <h4>E-laj</h4>
-          <div style={{ marginTop: ".5rem" }}>
-            <span>Branding , App Design, UI UX</span>
+        {our_work.map((o, id) => (
+          <div
+            className={`image-${id}`}
+            style={{
+              backgroundImage: `url(${o.our_work_media.data.attributes.url})`,
+            }}
+            key={o.id}
+          >
+            <h4>{o.title}</h4>
+            <div style={{ marginTop: ".5rem" }}>
+              <span>{o.description}</span>
+            </div>
           </div>
-        </div>
-        <div className="image-1" style={{ backgroundImage: `url(${image2})` }}>
+        ))}
+
+        {/* <div className="image-1" style={{ backgroundImage: `url(${image2})` }}>
           <h4>Roaderr</h4>
           <div style={{ marginTop: ".5rem" }}>
             <span>Branding, Web Design</span>
@@ -141,7 +177,7 @@ function Ourwork({ kId }) {
           <div style={{ marginTop: ".5rem" }}>
             <span>Branding , Web Design, Social Media Marketing</span>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="see-all-our-work">
         <a href="/under-construction/">See all our work {`>`}</a>

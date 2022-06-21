@@ -5,17 +5,20 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Container = styled.div`
   margin-bottom: 2rem;
+  img{
+    width:100%;
+  }
   .box {
     padding: 1rem;
     display: flex !important;
     justify-content: center;
     @media (max-width: 489px) {
-      width: 188px  !important;
-     } 
+      width: 188px !important;
+    }
   }
   .box-1 {
     width: 195px;
-/* 
+    /* 
     @media (max-width: 489px) {
       width: 100px;
       height: 100px;
@@ -32,7 +35,7 @@ const Container = styled.div`
   }
 `;
 
-function CustomerSlider({ data, title, testPage }) {
+function CustomerSlider({ data, title, testPage, our_team }) {
   var settings = {
     infinite: true,
     slidesToShow: 5,
@@ -75,81 +78,16 @@ function CustomerSlider({ data, title, testPage }) {
   return (
     <Container>
       <Slider {...settings}>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Arihant Gupta.png" />
+        {our_team.map((o) => (
+          <div className="box">
+            <div className="box-1">
+              <img
+                src={o.our_clients_media.data.attributes.url}
+                alt={o.our_clients_media.data.attributes.name}
+              />
+            </div>
           </div>
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Arpita Mitra.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Fardeen Ahmed.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Group 46.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/khokon halder.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Krishanu Saha.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Nazmul islam.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Praveen Rathan.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Sagnik Roy.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Sajal Ahmed.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Sanjana Akter.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Shehnaz Sultana.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Yathish Suresh.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Samrat Singha.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/team/Sourav Karn.png" />
-          </div>{" "}
-        </div>
+        ))}
       </Slider>
     </Container>
   );

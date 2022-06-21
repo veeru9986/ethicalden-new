@@ -1,21 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
-import { StaticImage } from "gatsby-plugin-image";
-import client1 from "../images/Clients/AKPS Logo.png";
-import client2 from "../images/Clients/Devine.png";
-import client3 from "../images/Clients/E-laj.png";
-import client4 from "../images/Clients/Hero.png";
-import client5 from "../images/Clients/Lassi Jn.png";
-import client6 from "../images/Clients/Mr Tandoor.png";
-import client7 from "../images/Clients/Prakrithi Study.png";
-import client8 from "../images/Clients/Roaderr.png";
-import client9 from "../images/Clients/S Fashion.png";
-import client10 from "../images/Clients/Table Talk.png";
-import client11 from "../images/Clients/The Roof.png";
-import client12 from "../images/Clients/Wonderlite.png";
+
 const Container = styled.div`
   margin-bottom: 2rem;
+
+  img{
+    width: 100%;
+  }
   .box {
     padding: 1rem;
     display: flex !important;
@@ -41,7 +33,7 @@ const Container = styled.div`
   }
 `;
 
-function CustomerSlider({ data, title, testPage }) {
+function CustomerSlider({ our_clients }) {
   var settings = {
     infinite: true,
     slidesToShow: 5,
@@ -84,66 +76,16 @@ function CustomerSlider({ data, title, testPage }) {
   return (
     <Container>
       <Slider {...settings}>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/AKPS Logo.png" />
+        {our_clients.map((o) => (
+          <div className="box" key={o.id}>
+            <div className="box-1">
+              <img
+                src={o.our_clients_media.data.attributes.url}
+                alt="ethicalden clients"
+              />
+            </div>
           </div>
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/Devine.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/E-laj.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/Hero.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/Lassi Jn.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/Mr Tandoor.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/Prakrithi Study.png" />
-          </div>{" "}
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/Roaderr.png" />
-          </div>
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/S Fashion.png" />
-          </div>
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/Table Talk.png" />
-          </div>
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/The Roof.png" />
-          </div>
-        </div>
-        <div className="box">
-          <div className="box-1">
-            <StaticImage src="../images/Clients/Wonderlite.png" />
-          </div>
-        </div>
+        ))}
       </Slider>
     </Container>
   );

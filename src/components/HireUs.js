@@ -310,7 +310,7 @@ const Wrapper = styled.div`
   }
 `;
 
-function HireUs({ kId }) {
+function HireUs({ kId, phone, email, description, footer }) {
   const [state, handleSubmit] = useForm("moqrbepk");
   const ref = React.useRef();
   const [reveal, setReveal] = React.useState(false);
@@ -359,7 +359,7 @@ function HireUs({ kId }) {
             className={cn({ "is-reveal": reveal })}
             ref={ref}
           >
-            Hire Us
+            {footer.title}
           </h5>
         </div>
         <div className="sub-heading">
@@ -368,7 +368,7 @@ function HireUs({ kId }) {
             className={cn({ "is-reveal": reveal })}
             ref={ref}
           >
-            Work with ethical den
+            {footer.sub_title}
           </h2>
         </div>
         <div className="services">
@@ -379,105 +379,23 @@ function HireUs({ kId }) {
             className={cn("services-names", { "is-reveal": reveal })}
             ref={ref}
           >
-            <div
-              className={cn("names", { "is-reveal": reveal })}
-              id="footer-1"
-              ref={ref}
-            >
-              <p
-                onClick={handleClick}
-                role="button"
-                className={
-                  selectText === "digital marketing" && `selected-services`
-                }
+            {footer.services.map((s) => (
+              <div
+                className={cn("names", { "is-reveal": reveal })}
+                id="footer-1"
+                ref={ref}
               >
-                digital marketing
-              </p>
-            </div>
-            <div
-              className={cn("names", { "is-reveal": reveal })}
-              id="footer-1"
-              ref={ref}
-            >
-              <p
-                onClick={handleClick}
-                role="button"
-                className={
-                  selectText === "cyber security" && `selected-services`
-                }
-              >
-                cyber security
-              </p>
-            </div>
-            <div
-              className={cn("names", { "is-reveal": reveal })}
-              id="footer-1"
-              ref={ref}
-            >
-              <p
-                onClick={handleClick}
-                role="button"
-                className={selectText === "seo" && `selected-services`}
-              >
-                seo
-              </p>
-            </div>
-            <div
-              className={cn("names", { "is-reveal": reveal })}
-              id="footer-1"
-              ref={ref}
-            >
-              <p
-                onClick={handleClick}
-                role="button"
-                className={selectText === "branding" && `selected-services`}
-              >
-                branding
-              </p>
-            </div>
-            <div
-              className={cn("names", { "is-reveal": reveal })}
-              id="footer-1"
-              ref={ref}
-            >
-              <p
-                onClick={handleClick}
-                role="button"
-                className={selectText === "ui/ux" && `selected-services`}
-              >
-                ui/ux
-              </p>
-            </div>
-            <div
-              className={cn("names", { "is-reveal": reveal })}
-              id="footer-1"
-              ref={ref}
-            >
-              <p
-                onClick={handleClick}
-                role="button"
-                className={
-                  selectText === "web development" && `selected-services`
-                }
-              >
-                web development
-              </p>
-            </div>
-            <div
-              className={cn("names", { "is-reveal": reveal })}
-              id="footer-1"
-              ref={ref}
-            >
-              <p
-                onClick={handleClick}
-                role="button"
-                className={
-                  selectText === "social media marketing" && `selected-services`
-                }
-              >
-                social media marketing
-              </p>
-            </div>
+                <p
+                  onClick={handleClick}
+                  role="button"
+                  className={
+                    selectText === s.title && `selected-services`
+                  }
+                >
+                  {s.title}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
         <div className="form-wrapper">
@@ -536,12 +454,12 @@ function HireUs({ kId }) {
           </div>
           <div className="email">
             <p id="footer-1" className={cn({ "is-reveal": reveal })}>
-              hello@ethicalden.com
+              {email}
             </p>
           </div>
           <div className="email">
             <p id="footer-1" className={cn({ "is-reveal": reveal })}>
-              +91 9547578920
+              {phone}
             </p>
           </div>
           <div className="follow-wrapper">
@@ -564,9 +482,7 @@ function HireUs({ kId }) {
 
         <div className="details">
           <p id="footer-1" className={cn({ "is-reveal": reveal })}>
-            When you choose to work with a company, you're looking for a
-            relationship based on trust and respect. We're not just a vendor,
-            we're your partner.
+                {description}
           </p>
           <div className="company-details">
             <h6

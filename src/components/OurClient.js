@@ -13,13 +13,13 @@ const Wrapper = styled.div`
   }
 `;
 
-function OurClient({kId}) {
+function OurClient({kId, our_clients}) {
   return (
     <Wrapper>
       <div className="heading" id={kId}>
         <h5>Our clients</h5>
       </div>
-      <CustomerSlider />
+      <CustomerSlider our_clients={our_clients} />
     </Wrapper>
   );
 }

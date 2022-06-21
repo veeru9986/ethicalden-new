@@ -11,13 +11,13 @@ const Wrapper = styled.div`
   }
 `;
 
-function Ourteam() {
+function Ourteam({our_team}) {
   return (
     <Wrapper>
       <div className="heading">
         <h5>Our team</h5>
       </div>
-      <CustomerSlider />
+      <CustomerSlider our_team={our_team} />
     </Wrapper>
   );
 }

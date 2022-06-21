@@ -69,7 +69,7 @@ function Index({ location, data }) {
     "den",
   ];
 
-  const { hero, about_us, services } = data.attributes;
+  const { hero, about_us, services, our_work, our_clients, our_team } = data.attributes;
 
   return (
     <Wrapper>
@@ -95,9 +95,9 @@ function Index({ location, data }) {
         <div id="services">
           <Services services={services} />
         </div>
-        <Ourwork kId="ourwork" />
-        <OurClient />
-        <Ourteam />
+        <Ourwork kId="ourwork" our_work={our_work} />
+        <OurClient our_clients={our_clients} />
+        <Ourteam our_team={our_team} />
       </Container>
     </Wrapper>
   );
@@ -137,6 +137,39 @@ export const query = graphql`
           title
         }
       }
+      our_work {
+        description
+        id
+        title
+        our_work_media {
+          data {
+            attributes {
+              url
+            }
+          }
+        }
+      }
+      our_clients {
+        our_clients_media {
+          data {
+            attributes {
+              url
+            }
+            id
+          }
+        }
+      }
+      our_team {
+        our_clients_media {
+          data {
+            attributes {
+              url
+              name
+            }
+          }
+        }
+      }
+      
     }
   }
 `;
