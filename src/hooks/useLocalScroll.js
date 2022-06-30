@@ -40,9 +40,17 @@ export default function useLocoScroll(start) {
       if (instance.scroll.y > 100) {
         document.querySelector("#color").classList.add("color-change");
         document.querySelector("#hire-us").classList.add("hire-border-change");
+        document.querySelector("#li_color").classList.add("li_color_change");
+        document.querySelector("#hide").classList.add("logo_hide");
+        document.querySelector("#show").classList.add("logo_show");
+
+
       } else {
         console.log("lesser");
         document.querySelector("#color").classList.remove("color-change");
+        document.querySelector("#li_color").classList.remove("li_color_change");
+        document.querySelector("#hide").classList.remove("logo_hide");
+        document.querySelector("#show").classList.remove("logo_show");
 
         document
           .querySelector("#hire-us")

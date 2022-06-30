@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../images/logo.png";
+import logoBlack from "../images/logoBlack.png";
+
 import Burger from "./NavbarComponents/Burger";
 import { Link } from "gatsby";
 import "./navbar.scss";
@@ -50,10 +52,17 @@ const Nav = styled.nav`
   } */
   .logo {
     z-index: 11;
+
+    .show_logo {
+      display: block;
+    }
+    .hide_logo {
+      display: none;
+    }
     img {
       width: 60px;
 
-      @media (max-width: 479px){
+      @media (max-width: 479px) {
         width: 55px;
       }
     }
@@ -124,10 +133,34 @@ function Navbar(props) {
       <Nav>
         <div className="logo">
           <a href="/" style={{ display: "flex" }}>
-            <img src={logo} alt="ethical den" />
+            <div
+              id="hide"
+              style={{ display: props.liColorChange ? "block" : "none" }}
+            >
+              <img
+                src={logoBlack}
+                alt="ethical den"
+                className={props.liColorChange && "show_logo"}
+              />
+            </div>
+
+            <div id="show">
+              <img
+                src={logo}
+                alt="ethical den"
+                className={props.liColorChange && "hide_logo"}
+              />
+            </div>
+
+            {/* 
+            {props.liColorChange ? (
+              <img src={logoBlack} alt="ethical den" />
+            ) : (
+              <img src={logo} alt="ethical den" />
+            )} */}
           </a>
         </div>
-        <Burger data={navData} />
+        <Burger data={navData} liColorChange={props.liColorChange} />
       </Nav>
     </Wrapper>
   );

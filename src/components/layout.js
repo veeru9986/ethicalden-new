@@ -68,7 +68,7 @@ function Layout({ children, location }) {
 
       {preloader ? (
         <div>
-          <Navbar />
+          <Navbar liColorChange={location.pathname.match("/branding")} />
           <div
             ref={ref}
             className="main-container"

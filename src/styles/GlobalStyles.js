@@ -37,7 +37,7 @@ const GlobalStyles = createGlobalStyle`
     --gap: 2rem;
     --mt1: 8.48rem;
     --tmt1: 5rem;
-
+    --span: 1.125rem
 
     @media (max-width: 991px) {
       --h1: 3rem;

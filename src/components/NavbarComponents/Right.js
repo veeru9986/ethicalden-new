@@ -28,7 +28,8 @@ const UL = styled.ul`
     font-size: 20px;
     /* identical to box height */
     transition: 0.3s ease-in-out;
-    color: var(--white);
+    color: ${({ liColorChange }) =>
+      liColorChange ? "var(--black)" : "var(--white)"};
     font-weight: var(--xmediumWeight);
     cursor: pointer;
   }
@@ -71,7 +72,7 @@ const UL = styled.ul`
   }
 `;
 
-const Right = ({ open, setOpen, data }) => {
+const Right = ({ open, setOpen, data, liColorChange }) => {
   console.log(data[0].title);
   const handleClick = (title) => {
     const newTitle = title.split(" ").join("");
@@ -104,24 +105,26 @@ const Right = ({ open, setOpen, data }) => {
   };
   return (
     <>
-      <UL open={open}>
-        {data.map((n, id) =>
+      <UL open={open} liColorChange={liColorChange} id="li_color">
+        {data.map((n) =>
           n.title !== "education" ? (
-            <li key={n.id}>
+            <li key={n.id} id="li_color">
               <a
                 className={`menu-links`}
                 activeClassName="menu-links-active"
                 onClick={() => handleClick(n.title)}
+                id="li_color"
               >
                 {n.title}
               </a>
             </li>
           ) : (
-            <li key={n.id}>
+            <li key={n.id} id="li_color">
               <a
                 className={`menu-links`}
                 activeClassName="menu-links-active"
                 href="/under-construction"
+                id="li_color"
               >
                 {n.title}
               </a>
