@@ -383,13 +383,14 @@ function HireUs({ kId, phone, email, description, footer }) {
               <div
                 className={cn("names", { "is-reveal": reveal })}
                 id="footer-1"
+                key={s.id}
                 ref={ref}
               >
                 <p
                   onClick={handleClick}
                   role="button"
                   className={
-                    selectText === s.title && `selected-services`
+                    selectText === s.title ? `selected-services` : null
                   }
                 >
                   {s.title}
@@ -419,7 +420,7 @@ function HireUs({ kId, phone, email, description, footer }) {
                   hidden
                   name="service"
                   id="service"
-                  value={selectText}
+                  defaultValue={selectText}
                 />
               </div>
               <div className="email-input">
@@ -482,7 +483,7 @@ function HireUs({ kId, phone, email, description, footer }) {
 
         <div className="details">
           <p id="footer-1" className={cn({ "is-reveal": reveal })}>
-                {description}
+            {description}
           </p>
           <div className="company-details">
             <h6

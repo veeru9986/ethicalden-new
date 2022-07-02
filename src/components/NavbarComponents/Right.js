@@ -72,7 +72,7 @@ const UL = styled.ul`
   }
 `;
 
-const Right = ({ open, setOpen, data, liColorChange }) => {
+const Right = ({ open, setOpen, data }) => {
   console.log(data[0].title);
   const handleClick = (title) => {
     const newTitle = title.split(" ").join("");
@@ -105,13 +105,17 @@ const Right = ({ open, setOpen, data, liColorChange }) => {
   };
   return (
     <>
-      <UL open={open} liColorChange={liColorChange} id="li_color">
+      <UL
+        open={open}
+        liColorChange={location.pathname.match("/branding")}
+        id="li_color"
+      >
         {data.map((n) =>
           n.title !== "education" ? (
             <li key={n.id} id="li_color">
               <a
                 className={`menu-links`}
-                activeClassName="menu-links-active"
+                activeclassname="menu-links-active"
                 onClick={() => handleClick(n.title)}
                 id="li_color"
               >
@@ -122,7 +126,7 @@ const Right = ({ open, setOpen, data, liColorChange }) => {
             <li key={n.id} id="li_color">
               <a
                 className={`menu-links`}
-                activeClassName="menu-links-active"
+                activeclassname="menu-links-active"
                 href="/under-construction"
                 id="li_color"
               >

@@ -78,8 +78,8 @@ function CustomerSlider({ data, title, testPage, our_team }) {
   return (
     <Container>
       <Slider {...settings}>
-        {our_team.map((o) => (
-          <div className="box">
+        {our_team.map((o, id) => (
+          <div className="box" key={id}>
             <div className="box-1">
               <img
                 src={o.our_clients_media.data.attributes.url}

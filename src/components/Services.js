@@ -116,7 +116,7 @@ function Services({ kId, services }) {
         </div>
         <div className="services-names">
           {services.service_names.map((s) => (
-            <div className="names" id={s.id}>
+            <div className="names" id={s.id} key={s.id}>
               <p id="para" ref={ref} className={cn({ "is-reveal": reveal })} >
                 {s.title}
               </p>

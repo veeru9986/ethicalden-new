@@ -14,11 +14,14 @@ const Container = styled.div`
     }
   }
   .second_wrapper {
-    width: 75%;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     margin-top: 2.5rem;
     flex-wrap: wrap;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
     .second_section {
       display: flex;
       flex-direction: column;
@@ -35,13 +38,43 @@ const Container = styled.div`
         color: #000;
         font-size: var(--span);
         line-height: 28px;
-
+        @media (max-width: 767px) {
+          line-height: 24px;
+        }
       }
     }
   }
-  .third_wrapper{
-    p{
-        color: var(--black);
+  .third_wrapper {
+    p {
+      color: var(--black);
+      @media (max-width: 767px) {
+        line-height: 24px;
+      }
+    }
+  }
+  .fourth_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    flex-wrap: wrap;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    .fourth_section {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0.85rem;
+    }
+    p {
+      color: black;
+      font-size: var(--span);
+      font-weight: var(--mediumWeight);
+    }
+    span {
+      font-size: var(--span);
+      font-weight: var(--mediumWeight);
+      color: #1a1a1a5e;
+      margin-bottom: 1rem;
     }
   }
 `;
@@ -80,13 +113,36 @@ function Proposal() {
           quis.
         </p>
         <p>
-        Pretium condimentum aliquam auctor commodo. Pellentesque
-          pharetra id risus arcu. Viverra in ultrices donec viverra consequat,
-          eu enim, ut. Cras morbi ornare mattis pulvinar eleifend orci. Libero
-          lacus vestibulum diam erat tincidunt aliquam sed laoreet. Integer
-          tellus ullamcorper scelerisque quisque tincidunt eget odio ipsum
-          justo. Adipiscing quam vel nunc consectetur nisl dictum.
+          Pretium condimentum aliquam auctor commodo. Pellentesque pharetra id
+          risus arcu. Viverra in ultrices donec viverra consequat, eu enim, ut.
+          Cras morbi ornare mattis pulvinar eleifend orci. Libero lacus
+          vestibulum diam erat tincidunt aliquam sed laoreet. Integer tellus
+          ullamcorper scelerisque quisque tincidunt eget odio ipsum justo.
+          Adipiscing quam vel nunc consectetur nisl dictum.
         </p>
+      </div>
+      <div className="fourth_wrapper">
+        <div className="fourth_section">
+          <p>social media</p>
+          <span>Lorem ipsum</span>
+          <span>Lorem ipsum</span>
+          <span>Lorem ipsum</span>
+          <span>Lorem ipsum</span>
+        </div>
+        <div className="fourth_section">
+          <p>social media</p>
+          <span>Lorem ipsum</span>
+          <span>Lorem ipsum</span>
+          <span>Lorem ipsum</span>
+          <span>Lorem ipsum</span>
+        </div>
+        <div className="fourth_section">
+          <p>social media</p>
+          <span>Lorem ipsum</span>
+          <span>Lorem ipsum</span>
+          <span>Lorem ipsum</span>
+          <span>Lorem ipsum</span>
+        </div>
       </div>
     </Container>
   );

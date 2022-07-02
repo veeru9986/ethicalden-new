@@ -117,7 +117,7 @@ function RightSection({ data }) {
       stagger: 0.2,
       ease: "power2",
     });
-    gsap.from("left-section-title1", {
+    gsap.from("#left-section-title1", {
       duration: 1,
       y: 50,
       opacity: 0,

@@ -86,9 +86,9 @@ function Index({ location, data }) {
       <Container>
         {about_us.map((a, id) =>
           (id + 1) % 2 !== 0 ? (
-            <RightSection data={a} kId="aboutus" />
+            <RightSection data={a} kId="aboutus" key={a.id} />
           ) : (
-            <LeftSection data={a} />
+            <LeftSection data={a} key={a.id} />
           )
         )}
 

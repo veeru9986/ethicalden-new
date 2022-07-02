@@ -12,8 +12,7 @@ const Wrapper = styled.div`
   padding-bottom: 2rem;
   place-items: center;
   @media (max-width: 479px) {
-    background-position-x: right;
-    min-height: 90vh;
+    min-height: 80vh;
   }
 
   .hero_wrapper_wrapper {
@@ -28,6 +27,9 @@ const Wrapper = styled.div`
         color: var(--black);
         font-weight: 700;
         line-height: 70px;
+        @media (max-width: 767px) {
+          line-height: normal;
+        }
       }
     }
   }
