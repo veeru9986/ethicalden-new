@@ -13,6 +13,7 @@ import Ourwork from "../components/Ourwork";
 import OurClient from "../components/OurClient";
 import Ourteam from "../components/Ourteam";
 import Seo from "../components/Seo/Seo";
+import Company from "../components/Branding/Company";
 
 const dataS = [
   {
@@ -98,6 +99,7 @@ function Index({ location, data }) {
         <Ourwork kId="ourwork" our_work={our_work} />
         <OurClient our_clients={our_clients} />
         <Ourteam our_team={our_team} />
+        <Company />
       </Container>
     </Wrapper>
   );

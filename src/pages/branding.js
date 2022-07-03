@@ -3,6 +3,9 @@ import styled from "styled-components";
 import Hero from "../components/Branding/Hero";
 import Process from "../components/Branding/Process";
 import Proposal from "../components/Branding/Proposal";
+import Website from "../components/Branding/Website";
+import Company from "../components/Branding/Company";
+
 import { Wrapper } from "../components/StyledComponents/Wrapper";
 
 const Wrapper1 = styled(Wrapper)`
@@ -25,6 +28,7 @@ const Container1 = styled(Container)`
     width: 100%;
   }
 `;
+
 function branding() {
   return (
     <Wrapper1>
@@ -36,6 +40,8 @@ function branding() {
       </Container>
       <Container1>
         <Process />
+        <Website />
+        <Company />
       </Container1>
     </Wrapper1>
   );

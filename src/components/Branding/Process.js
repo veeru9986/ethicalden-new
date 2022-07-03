@@ -9,6 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   width: 100%;
   height: auto;
+  margin-bottom: 3rem;
   .bg_image {
     background-position: center;
     background-size: cover;
@@ -52,6 +53,12 @@ const Container = styled.div`
       }
     }
   }
+  .image{
+    background-color: #000;
+    width: 100%;
+    height: 600px;
+    margin: 3rem 0;
+  }
 `;
 
 function Process() {
@@ -91,6 +98,7 @@ function Process() {
           </div>
         </div>
       </div>
+      <div className="image" />
     </Container>
   );
 }
