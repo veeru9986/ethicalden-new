@@ -99,7 +99,6 @@ function Index({ location, data }) {
         <Ourwork kId="ourwork" our_work={our_work} />
         <OurClient our_clients={our_clients} />
         <Ourteam our_team={our_team} />
-        <Company />
       </Container>
     </Wrapper>
   );
