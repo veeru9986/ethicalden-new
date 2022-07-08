@@ -19,6 +19,9 @@ const Wrapper = styled.div`
     h3 {
       color: black;
       font-weight: var(--xheavyWeight);
+      @media (max-width: 479px) {
+         font-size: 32px;
+    }
     }
   }
   .about {

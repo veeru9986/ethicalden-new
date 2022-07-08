@@ -33,6 +33,9 @@ const Wrapper = styled.div`
     align-items: center;
     h2 {
       font-weight: var(--mediumWeight);
+      @media (max-width: 479px) {
+         font-size: 32px;
+    }
     }
   }
 `;

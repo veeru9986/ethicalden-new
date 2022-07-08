@@ -11,16 +11,20 @@ const Container = styled.div`
     h2 {
       color: var(--black);
       font-weight: var(--xheavyWeight);
+      @media (max-width: 479px) {
+        font-size: 32px;
+      }
     }
   }
   .second_wrapper {
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     margin-top: 2.5rem;
     flex-wrap: wrap;
-    @media (max-width: 767px) {
+    @media (max-width: 479px) {
       width: 100%;
+      flex-direction: column;
     }
     .second_section {
       display: flex;
@@ -55,10 +59,11 @@ const Container = styled.div`
   .fourth_wrapper {
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 50%;
     flex-wrap: wrap;
     @media (max-width: 767px) {
       width: 100%;
+      flex-direction: column;
     }
     .fourth_section {
       display: flex;

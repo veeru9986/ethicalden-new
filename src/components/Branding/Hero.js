@@ -27,8 +27,10 @@ const Wrapper = styled.div`
         color: var(--black);
         font-weight: 700;
         line-height: 70px;
+        width: 100%;
         @media (max-width: 767px) {
           line-height: normal;
+          font-size: 32px;
         }
       }
     }
