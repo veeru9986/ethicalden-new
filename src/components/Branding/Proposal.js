@@ -51,6 +51,7 @@ const Container = styled.div`
   .third_wrapper {
     p {
       color: var(--black);
+      line-height: 32px;
       @media (max-width: 767px) {
         line-height: 24px;
       }

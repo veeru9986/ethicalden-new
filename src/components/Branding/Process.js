@@ -41,6 +41,8 @@ const Container = styled.div`
         color: black;
         font-size: var(--p2);
         font-weight: var(--lightWeight);
+        line-height: 32px;
+
         @media (max-width: 767px) {
           font-size: var(--span);
           line-height: 24px;
