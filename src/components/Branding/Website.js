@@ -19,12 +19,14 @@ const Wrapper = styled.div`
     grid-area: auto/1/auto/4;
     .wrapper {
       width: 50%;
-
-      &:nth-child(2){
+      @media (max-width: 767px) {
+        width: 100%;
+      }
+      &:nth-child(2) {
         margin-left: 2rem;
       }
     }
- 
+
     @media (max-width: 767px) {
       flex-direction: column;
     }
