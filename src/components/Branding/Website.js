@@ -13,6 +13,22 @@ const Wrapper = styled.div`
     width: 100%;
     height: 600px;
   }
+  .flex_wrapper {
+    display: flex;
+    width: 100%;
+    grid-area: auto/1/auto/4;
+    .wrapper {
+      width: 50%;
+
+      &:nth-child(2){
+        margin-left: 2rem;
+      }
+    }
+ 
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
   .heading {
     grid-area: auto/2/auto/3;
     margin-bottom: 4rem;
@@ -20,8 +36,8 @@ const Wrapper = styled.div`
       color: black;
       font-weight: var(--xheavyWeight);
       @media (max-width: 479px) {
-         font-size: 32px;
-    }
+        font-size: 32px;
+      }
     }
   }
   .about {
@@ -32,8 +48,8 @@ const Wrapper = styled.div`
     width: 35%;
     margin: 3rem 0;
     @media (max-width: 767px) {
-        width: 100%;
-      }
+      width: 100%;
+    }
     .section {
       display: flex;
       align-items: center;
@@ -41,7 +57,7 @@ const Wrapper = styled.div`
         flex-direction: column;
         align-items: unset;
       }
-      p{
+      p {
         margin-right: 1rem;
       }
       p,
@@ -65,8 +81,11 @@ function Website() {
       <div className="heading">
         <h3>The Website</h3>
       </div>
-      <div className="wrapper" />
-      <div className="wrapper" />
+      <div className="flex_wrapper">
+        <div className="wrapper" />
+        <div className="wrapper" />
+      </div>
+
       <div className="about">
         <div className="section">
           <p>Product Manager</p>
