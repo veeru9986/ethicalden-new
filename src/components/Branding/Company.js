@@ -23,6 +23,10 @@ const Wrapper = styled.div`
     position: relative;
     .text {
       margin-bottom: 2rem;
+      position: absolute;
+      min-width: 100px;
+      bottom: 0;
+      right: 1%;
     }
     a {
       font-size: 2.5rem;
@@ -31,10 +35,8 @@ const Wrapper = styled.div`
       font-weight: bold;
       transition: 0.3s ease;
       cursor: pointer;
-      z-index: 3;
-      position: relative;
       margin-right: 2rem;
-      @media (max-width:479px){
+      @media (max-width: 479px) {
         font-size: 1.5rem;
       }
       &:hover {
@@ -54,12 +56,14 @@ const Wrapper = styled.div`
   .heading {
     grid-area: auto/2/auto/3;
     display: flex;
-    height: 100%;
+    width: 100%;
     align-items: center;
-    margin-bottom: 2.5rem;
+    position: absolute;
+    top: 0;
+    padding: 2rem;
     h2 {
       font-weight: var(--mediumWeight);
-      color: #000;
+      color: #fff;
       @media (max-width: 479px) {
         font-size: 32px;
       }
@@ -70,16 +74,16 @@ const Wrapper = styled.div`
 function Company() {
   return (
     <Wrapper>
-      <div className="heading">
-        <h2>
-          Brooklyn Roasting <br /> Company
-        </h2>
-      </div>
       <div
         style={{ backgroundImage: `url(${company})` }}
         className="company_background"
       >
         <div className="layer" />
+        <div className="heading">
+          <h2>
+            Brooklyn Roasting <br /> Company
+          </h2>
+        </div>
         <div className="text">
           <a href="#">Next</a>
         </div>
