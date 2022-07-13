@@ -22,9 +22,6 @@ const Wrapper = styled.div`
       @media (max-width: 767px) {
         width: 100%;
       }
-      &:nth-child(2) {
-        margin-left: 2rem;
-      }
     }
 
     @media (max-width: 767px) {
@@ -48,7 +45,7 @@ const Wrapper = styled.div`
     justify-content: flex-start;
     grid-area: auto/2/auto/4;
     width: 35%;
-    margin: 3rem 0;
+    margin-top: 3rem;
     @media (max-width: 767px) {
       width: 100%;
     }
